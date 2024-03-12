@@ -1,0 +1,39 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.row {
+    margin-bottom: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-md-3 {
+    transition: transform 0.3s ease;
+}
+
+.col-md-3:hover {
+    transform: scale(1.2);
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+a {
+    color: #78c6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #32a1ff;
+}
+@media (max-width: 830px) {
+    .col-md-3 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}

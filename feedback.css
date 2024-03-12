@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 30px;
+}
+
+.heading h1 {
+  color: #ffffff;
+  padding: 25px;
+  padding-bottom: 0px;
+  border: 0;
+  text-align: left;
+}
+
+form {
+  background: #282828;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 60%;
+  max-width: 700px;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+form input,
+form textarea {
+  border: none;
+  margin: 10px 0;
+  padding: 20px;
+  background: #383838;
+  font-size: 16px;
+  border-radius: 20px;
+  color: #ffffff;
+  width: 100%;
+}
+
+form textarea {
+  overflow-y: hidden;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.photos label {
+  display: block;
+}
+
+.photos img {
+  width: 100px;
+  height: 100px;
+  margin: 0px;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("https://cdn3.iconfinder.com/data/icons/inficons-set-2/512/star-ratings-512.png");
+  background-size: cover;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.star-rating label:hover,
+.star-rating input[type="radio"]:checked + label {
+  background-color: #ffd700;
+}
+
+form button {
+  padding: 15px;
+  background: #4caf50;
+  color: #ffffff;
+  font-size: 18px;
+  border: 0;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
+  border-radius: 30px;
+}
+
+/* @media screen and (max-width: 768px) {
+  .heading h1 {
+    font-size: 24px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .photos img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .star-rating label {
+    width: 25px;
+    height: 25px;
+  }
+
+  form button {
+    padding: 12px;
+    font-size: 16px;
+  }
+} */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add some padding */
+  }
+
+  .heading h1 {
+    padding-top: 100px; /* Remove the margin to eliminate the gap */
+    text-align: center; /* Center the heading */
+  }
+
+  .form-container {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none; /* Remove max-width */
+  }
+
+  form {
+    background: #282828;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  /* Rest of your responsive styles here */
+}

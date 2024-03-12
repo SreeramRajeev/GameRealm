@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realm gallery</title>
+    <link rel="stylesheet" href="gallery.css"/>
+  <link rel="Website Icon" type="png" href="arc.png">
+</head>
+<body>
+    <div class="heading">
+        <h2>R E A L M    G A L L E R Y</h2>
+    </div>
+    
+    <div class="full-img" id="fullImgBox">
+        <div>
+        <img src="sm.jpg" alt="" id="fullImg">
+        </div>
+        <div class="desc" id="imgDescription">
+            <h3>Photo Title</h3>
+          
+            <p>This is some descriptive text about the photo...</p>
+        </div>
+        <span onclick="closeFullImg()">X</span>
+    </div>
+
+    <div class="img-gallery">
+        <img src="fp.jpg" onclick="openFullImg('fp.jpg', 'Flappy bird', 'Subheading for first photo', 'Flappy Bird is an arcade-style game in which the player controls the bird Faby, which moves persistently to the right. The player is tasked with navigating Faby through pairs of pipes that have equally sized gaps placed at random heights. Faby automatically descends and only ascends when the player taps the touchscreen. Each successful pass through a pair of pipes awards the player one point. Colliding with a pipe or the ground ends the gameplay. During the game over screen, the player is awarded a bronze medal if they reached ten or more points, a silver medal from twenty points, a gold medal from thirty points, and a platinum medal from forty points.', 'https://example.com/photo1')">
+        <img src="sp.jpg" onclick="openFullImg('sp.jpg', 'Space shooter', 'Subheading for second photo', 'Description for second photo...', 'https://example.com/photo2')">
+		<img src="sm.jpg" onclick="openFullImg('sm.jpg', 'Super Mario', 'Subheading for Super Mario', 'Super Mario is an iconic platformer game where you journey through various worlds to rescue Princess Peach from the clutches of Bowser. Jump, run, and stomp on enemies in this beloved gaming adventure.', 'https://example.com/super-mario-info')">
+        <img src="fb2.jpg" onclick="openFullImg('fb2.jpg', 'Flappy bird', 'Subheading for first photo', 'Description for first photo...', 'https://example.com/photo1')">
+		<img src="sp1.jpg" onclick="openFullImg('sp1.jpg', 'Space Shooter', 'Subheading for Space Shooter', 'Space Shooter is a classic arcade game where you control a spaceship and engage in intense battles against waves of alien enemies. Dodge incoming projectiles, collect power-ups, and show off your shooting skills.', 'https://example.com/space-shooter-info')">
+		<img src="sm1.jpg" onclick="openFullImg('sm1.jpg', 'Super Mario', 'Subheading for Super Mario', 'Super Mario is an iconic platformer game where you journey through various worlds to rescue Princess Peach from the clutches of Bowser. Jump, run, and stomp on enemies in this beloved gaming adventure.', 'https://example.com/super-mario-info')">
+        <img src="fb3.jpg" onclick="openFullImg('fb3.jpg', 'Flappy Bird', 'Subheading for first photo', 'Description for first photo...', 'https://example.com/photo1')">
+		<img src="sp2.jpg" onclick="openFullImg('sp2.jpg', 'Space Shooter', 'Subheading for Space Shooter', 'Space Shooter is a classic arcade game where you control a spaceship and engage in intense battles against waves of alien enemies. Dodge incoming projectiles, collect power-ups, and show off your shooting skills.', 'https://example.com/space-shooter-info')">
+        <img src="pm.jpg" onclick="openFullImg('pm.jpg', 'Pac-man', 'Subheading for third photo', 'Description for third photo...', 'https://example.com/photo3')">
+		<img src="sp4.jpg" onclick="openFullImg('sp4.jpg', 'Space Shooter', 'Subheading for Space Shooter', 'Space Shooter is a classic arcade game where you control a spaceship and engage in intense battles against waves of alien enemies. Dodge incoming projectiles, collect power-ups, and show off your shooting skills.', 'https://example.com/space-shooter-info')">
+		<img src="sm4.jpg" onclick="openFullImg('sm4.jpg', 'Super Mario', 'Subheading for Super Mario', 'Super Mario is an iconic platformer game where you journey through various worlds to rescue Princess Peach from the clutches of Bowser. Jump, run, and stomp on enemies in this beloved gaming adventure.', 'https://example.com/super-mario-info')">
+        <img src="fp.jpg" onclick="openFullImg('fb4.jpg', 'First Photo Title', 'Subheading for first photo', 'Description for first photo...', 'https://example.com/photo1')">
+        <img src="sm5.jpg" onclick="openFullImg('sm5.jpg', 'Third Photo Title', 'Subheading for third photo', 'Description for third photo...', 'https://example.com/photo3')">
+        <img src="sp.jpg" onclick="openFullImg('sp.jpg', 'Second Photo Title', 'Subheading for second photo', 'Description for second photo...', 'https://example.com/photo2')">
+        <img src="sm6.jpg" onclick="openFullImg('sm6.jpg', 'Third Photo Title', 'Subheading for third photo', 'Description for third photo...', 'https://example.com/photo3')">
+        <img src="pm1.jpg" onclick="openFullImg('pm1.jpg', 'First Photo Title', 'Subheading for first photo', 'Description for first photo...', 'https://example.com/photo1')">
+		<img src="dr3.jpg" onclick="openFullImg('dr3.jpg', 'Dinosaur Game', 'Subheading for Dinosaur Game', 'The Dinosaur Game is a fun offline browser game by Google that you can play when you have no internet connection. Help the cute T-Rex jump over cacti and obstacles to achieve a high score.', 'https://example.com/dinosaur-game-info')">
+        <img src="fb2.jpg" onclick="openFullImg('fb2.jpg', 'First Photo Title', 'Subheading for first photo', 'Description for first photo...', 'https://example.com/photo1')">
+		<img src="sp1.jpg" onclick="openFullImg('sp1.jpg', 'Space Shooter', 'Subheading for Space Shooter', 'Space Shooter is a classic arcade game where you control a spaceship and engage in intense battles against waves of alien enemies. Dodge incoming projectiles, collect power-ups, and show off your shooting skills.', 'https://example.com/space-shooter-info')">
+		<img src="pm2.jpg" onclick="openFullImg('pm2.jpg', 'Pac-Man', 'Subheading for Pac-Man', 'Pac-Man is an iconic arcade game where you control a yellow character that must eat all the dots while avoiding ghosts. Navigate through mazes and strategize your moves to clear each level.', 'https://example.com/pac-man-info')">
+         
+		<img src="dr3.jpg" onclick="openFullImg('dr3.jpg', 'Dinosaur Game', 'Subheading for Dinosaur Game', 'The Dinosaur Game is a fun offline browser game by Google that you can play when you have no internet connection. Help the cute T-Rex jump over cacti and obstacles to achieve a high score.', 'https://example.com/dinosaur-game-info')">
+        <img src="pl.jpg" onclick="openFullImg('pl.jpg', 'Second Photo Title', 'Subheading for second photo', 'Description for second photo...', 'https://example.com/photo2')">
+		<img src="dr2.jpg" onclick="openFullImg('dr2.jpg', 'Dinosaur Game', 'Subheading for Dinosaur Game', 'The Dinosaur Game is a fun offline browser game by Google that you can play when you have no internet connection. Help the cute T-Rex jump over cacti and obstacles to achieve a high score.', 'https://example.com/dinosaur-game-info')">
+        <img src="pl1.jpg" onclick="openFullImg('pl1.jpg', 'Second Photo Title', 'Subheading for second photo', 'Description for second photo...', 'https://example.com/photo2')">
+		<img src="dr1.jpg" onclick="openFullImg('dr1.jpg', 'Dinosaur Game', 'Subheading for Dinosaur Game', 'The Dinosaur Game is a fun offline browser game by Google that you can play when you have no internet connection. Help the cute T-Rex jump over cacti and obstacles to achieve a high score.', 'https://example.com/dinosaur-game-info')">
+		<img src="sp2.jpg" onclick="openFullImg('sp2.jpg', 'Space Shooter', 'Subheading for Space Shooter', 'Space Shooter is a classic arcade game where you control a spaceship and engage in intense battles against waves of alien enemies. Dodge incoming projectiles, collect power-ups, and show off your shooting skills.', 'https://example.com/space-shooter-info')">
+        <img src="pm.jpg" onclick="openFullImg('pm.jpg', 'Third Photo Title', 'Subheading for third photo', 'Description for third photo...', 'https://example.com/photo3')">
+        <img src="dr.jpg" onclick="openFullImg('dr.jpg', 'First Photo Title', 'Subheading for first photo', 'Description for first photo...', 'https://example.com/photo1')">
+		<img src="sp4.jpg" onclick="openFullImg('sp4.jpg', 'Space Shooter', 'Subheading for Space Shooter', 'Space Shooter is a classic arcade game where you control a spaceship and engage in intense battles against waves of alien enemies. Dodge incoming projectiles, collect power-ups, and show off your shooting skills.', 'https://example.com/space-shooter-info')">
+		<img src="sm4.jpg" onclick="openFullImg('sm4.jpg', 'Super Mario', 'Subheading for Super Mario', 'Super Mario is an iconic platformer game where you journey through various worlds to rescue Princess Peach from the clutches of Bowser. Jump, run, and stomp on enemies in this beloved gaming adventure.', 'https://example.com/super-mario-info')">
+        <img src="fp.jpg" onclick="openFullImg('fb4.jpg', 'First Photo Title', 'Subheading for first photo', 'Description for first photo...', 'https://example.com/photo1')">
+        <img src="sp.jpg" onclick="openFullImg('sp.jpg', 'Second Photo Title', 'Subheading for second photo', 'Description for second photo...', 'https://example.com/photo2')">
+        <img src="sm5.jpg" onclick="openFullImg('sm5.jpg', 'Third Photo Title', 'Subheading for third photo', 'Description for third photo...', 'https://example.com/photo3')">
+        <img src="sm6.jpg" onclick="openFullImg('sm6.jpg', 'Third Photo Title', 'Subheading for third photo', 'Description for third photo...', 'https://example.com/photo3')">
+        <img src="pm1.jpg" onclick="openFullImg('pm1.jpg', 'First Photo Title', 'Subheading for first photo', 'Description for first photo...', 'https://example.com/photo1')">
+        <img src="fb2.jpg" onclick="openFullImg('fb2.jpg', 'First Photo Title', 'Subheading for first photo', 'Description for first photo...', 'https://example.com/photo1')">
+		<img src="pm2.jpg" onclick="openFullImg('pm2.jpg', 'Pac-Man', 'Subheading for Pac-Man', 'Pac-Man is an iconic arcade game where you control a yellow character that must eat all the dots while avoiding ghosts. Navigate through mazes and strategize your moves to clear each level.', 'https://example.com/pac-man-info')">
+		<img src="sp1.jpg" onclick="openFullImg('sp1.jpg', 'Space Shooter', 'Subheading for Space Shooter', 'Space Shooter is a classic arcade game where you control a spaceship and engage in intense battles against waves of alien enemies. Dodge incoming projectiles, collect power-ups, and show off your shooting skills.', 'https://example.com/space-shooter-info')">
+<img src="sm.jpg" onclick="openFullImg('sm.jpg', 'Super Mario', 'Subheading for Super Mario', 'Super Mario is an iconic platformer game where you journey through various worlds to rescue Princess Peach from the clutches of Bowser. Jump, run, and stomp on enemies in this beloved gaming adventure.', 'https://example.com/super-mario-info')">
+<img src="sp1.jpg" onclick="openFullImg('sp1.jpg', 'Space Shooter', 'Subheading for Space Shooter', 'Space Shooter is a classic arcade game where you control a spaceship and engage in intense battles against waves of alien enemies. Dodge incoming projectiles, collect power-ups, and show off your shooting skills.', 'https://example.com/space-shooter-info')">
+<img src="sm1.jpg" onclick="openFullImg('sm1.jpg', 'Super Mario', 'Subheading for Super Mario', 'Super Mario is an iconic platformer game where you journey through various worlds to rescue Princess Peach from the clutches of Bowser. Jump, run, and stomp on enemies in this beloved gaming adventure.', 'https://example.com/super-mario-info')">
+<img src="sp4.jpg" onclick="openFullImg('sp4.jpg', 'Space Shooter', 'Subheading for Space Shooter', 'Space Shooter is a classic arcade game where you control a spaceship and engage in intense battles against waves of alien enemies. Dodge incoming projectiles, collect power-ups, and show off your shooting skills.', 'https://example.com/space-shooter-info')">
+<img src="sm4.jpg" onclick="openFullImg('sm4.jpg', 'Super Mario', 'Subheading for Super Mario', 'Super Mario is an iconic platformer game where you journey through various worlds to rescue Princess Peach from the clutches of Bowser. Jump, run, and stomp on enemies in this beloved gaming adventure.', 'https://example.com/super-mario-info')">
+<img src="sp2.jpg" onclick="openFullImg('sp2.jpg', 'Space Shooter', 'Subheading for Space Shooter', 'Space Shooter is a classic arcade game where you control a spaceship and engage in intense battles against waves of alien enemies. Dodge incoming projectiles, collect power-ups, and show off your shooting skills.', 'https://example.com/space-shooter-info')">
+<img src="pm2.jpg" onclick="openFullImg('pm2.jpg', 'Pac-Man', 'Subheading for Pac-Man', 'Pac-Man is an iconic arcade game where you control a yellow character that must eat all the dots while avoiding ghosts. Navigate through mazes and strategize your moves to clear each level.', 'https://example.com/pac-man-info')">
+<img src="dr3.jpg" onclick="openFullImg('dr3.jpg', 'Dinosaur Game', 'Subheading for Dinosaur Game', 'The Dinosaur Game is a fun offline browser game by Google that you can play when you have no internet connection. Help the cute T-Rex jump over cacti and obstacles to achieve a high score.', 'https://example.com/dinosaur-game-info')">
+<img src="dr2.jpg" onclick="openFullImg('dr2.jpg', 'Dinosaur Game', 'Subheading for Dinosaur Game', 'The Dinosaur Game is a fun offline browser game by Google that you can play when you have no internet connection. Help the cute T-Rex jump over cacti and obstacles to achieve a high score.', 'https://example.com/dinosaur-game-info')">
+<img src="dr1.jpg" onclick="openFullImg('dr1.jpg', 'Dinosaur Game', 'Subheading for Dinosaur Game', 'The Dinosaur Game is a fun offline browser game by Google that you can play when you have no internet connection. Help the cute T-Rex jump over cacti and obstacles to achieve a high score.', 'https://example.com/dinosaur-game-info')">
+
+    </div>
+
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+        var imgDescription = document.getElementById("imgDescription");
+
+        function openFullImg(pic, title, subheading, description, link) {
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+            
+            var descriptionHTML = `
+                <h3>${title}</h3>
+                <p>${description}</p>
+            `;
+            
+            imgDescription.innerHTML = descriptionHTML;
+        }
+
+        function closeFullImg() {
+            fullImgBox.style.display = "none";
+        }
+    </script>
+</body>
+</html>

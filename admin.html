@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="admin.css">
+	<title>Admin Panel</title>
+  <link rel="Website Icon" type="png" href="arc.png">
+</head>
+
+<body>
+	<section id="sidebar">
+		<a href="#" class="brand"><i class='bx bxs-smile icon'></i> AdminSite</a>
+		<ul class="side-menu">
+			<li><a href="admin.html" class="active"><i class='bx bxs-dashboard icon'></i>Dashboard</a></li>
+      <li><a href="https://replit.com/@SreeramRajeev/GameRealm" class="active"><i class='bx bxs-dashboard icon'></i>Replit</a></li>
+      <li><a href="GameRealm.html" class="active"><i class='bx bxs-dashboard icon'></i>GameRealm</a></li>
+      <li><a href="List.html" class="active"><i class='bx bxs-dashboard icon'></i>Games</a></li>
+      <li><a href="gallery.html" class="active"><i class='bx bxs-dashboard icon'></i>Realm Gallery</a></li>
+			
+		</ul>
+	</section>
+
+	<section id="content">
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' style="color: gray;"></i>
+      <form id="search-form" action="https://www.google.com/search" target="_blank">
+            <div class="form-group">
+                <input type="text" id="search-input" name="q" placeholder="Search games..." style="color:#8D8D8D;">
+              <a href="#" id="search-link">
+            <i class='bx bx-search icon'></i>
+        </a>
+            </div>
+        
+        </form>
+        
+			<span class="divider"></span>
+			<div class="profile">
+				<img  class="profile-img" src="arc.png" alt="">
+				<ul class="profile-link"style="background-color:gray">
+					<!-- <li><a href="#"><i class='bx bxs-user-circle icon'></i> Profile</a></li>
+					<li><a href="#"><i class='bx bxs-cog'></i> Settings</a></li> -->
+					<li><a href="index.html"><i class='bx bxs-log-out-circle'></i> Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- main -->
+		<main>
+			<h1 class="title">Dashboard</h1>
+			<div class="info-data">
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>300</h2>
+							<p style="color:rgb(0, 123, 255)">Games</p>
+						</div>
+						<i class='bx bx-trending-up icon'></i>
+					</div>
+					<span class="progress" data-value="40%"></span>
+					<span class="label">40%</span>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>234</h2>
+							<p style="color:rgb(0, 123, 255)">Popular</p>
+						</div>
+						<i class='bx bx-trending-up icon'></i>
+					</div>
+					<span class="progress" data-value="60%"></span>
+					<span class="label">60%</span>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>100</h2>
+							<p style="color:rgb(0, 123, 255)">Pageviews</p>
+						</div>
+						<i class='bx bx-trending-up icon'></i>
+					</div>
+					<span class="progress" data-value="30%"></span>
+					<span class="label">30%</span>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>235</h2>
+							<p style="color:rgb(0, 123, 255)">Visitors</p>
+						</div>
+						<i class='bx bx-trending-up icon'></i>
+					</div>
+					<span class="progress" data-value="80%"></span>
+					<span class="label">80%</span>
+				</div>
+			</div>
+
+			<div class="data">
+				<div class="content-data">
+					<div class="head">
+						<h3>Game Played</h3>
+						<div class="menu">
+							<i class='bx bx-dots-horizontal-rounded icon'></i>
+							<ul class="menu-link">
+								<li><a href="#">Edit</a></li>
+								<li><a href="#">Save</a></li>
+								<li><a href="#">Remove</a></li>
+							</ul>
+						</div>
+          </div id="image-chart">
+          <!-- <img src="graph.gif" alt="Animated GIF" style="width: 100%;"> -->
+          <img src="insights.png" alt="image" style="width: 100%;">
+				</div>
+				<div class="content-data">
+					<div class="head">
+						<h3>Chatbox</h3>
+						<div class="menu">
+							<i class='bx bx-dots-horizontal-rounded icon'></i>
+							<ul class="menu-link">
+								<li><a href="#">Edit</a></li>
+								<li><a href="#">Save</a></li>
+								<li><a href="#">Remove</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="chat-box">
+						<p class="day"><span>Today</span></p>
+						<div class="msg">
+							<img src="arc.png" alt="">
+							<div class="chat">
+								<div class="profile">
+									<span class="username" style="color:white">Deoxy</span>
+									<span class="time">18:30</span>
+								</div>
+								<p>Hello there!</p>
+							</div>
+						</div>
+						<div class="msg me">
+							<div class="chat">
+								<div class="profile">
+                  <img src="vector.jpg" alt="Profile Image" style="vertical-align: middle;">
+                  <span class="username" style="color:white">me</span>
+									<span class="time">18:30</span>
+								</div>
+								<p>🎮 Welcome to the GameRealm! 🎮
+
+Step into a world where gaming magic happens. From expert tips to hot releases, I'm your virtual guide to all things gaming. Whether you're a newbie or a seasoned pro, get ready to unlock gaming adventures, news, and more. Let's dive in and level up your gaming experience together! 🚀🎮
+
+								</p>
+							</div>
+						</div>
+						<div class="msg me">
+							<div class="chat">
+								<div class="profile">
+                  <!-- <img src="arc.png" alt="Profile Image" style="vertical-align: middle; margin-right: 8px;">
+                   <!-- <span class="username" style="color:white">me</span> -->
+									<span class="time">18:30</span>
+								</div>
+								<p>Hey team, let's coordinate our strategy for this round!</p>
+							</div>
+						</div>
+            <div class="msg">
+							<img src="arc.png" alt="">
+							<div class="chat">
+								<div class="profile">
+									<span class="username" style="color:white">Deoxy</span>
+									<span class="time">18:30</span>
+								</div>
+								<p>Nice Idea!</p>
+							</div>
+						</div>
+						<div class="msg me">
+							<div class="chat">
+								<div class="profile">
+                  <img src="vector.jpg" alt="Profile Image" style="vertical-align: middle;">
+                   <span class="username" style="color:white">me</span>
+									<span class="time">18:30</span>
+								</div>
+								<p>Incoming grenade! Take cover!</p>
+							</div>
+						</div>
+            <div class="msg">
+							<img src="arc.png" alt="">
+							<div class="chat">
+								<div class="profile">
+									<span class="username" style="color:white">Deoxy</span>
+									<span class="time">18:30</span>
+								</div>
+								<p>Always ready!</p>
+							</div>
+						</div>
+					</div>
+					<form action="#" id="chat-form">
+						<div class="form-group">
+							<input type="text" placeholder="Type..." style="color:#8D8D8D;">
+							<button type="submit" class="btn-send"><i class='bx bxs-send'></i></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+
+	</section>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="admin.js"></script>
+</body>
+
+</html>

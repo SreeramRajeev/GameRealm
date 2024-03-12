@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="Website Icon" type="png" href="arc.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style1.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+    <span id="storedValue" style="display: none;"></span>
+    <img id="gameThumbnail">
+    <p class="des">Short Description:<p id="shortdesc"></p></p>
+    <p class="genr">Genre:<p id="Gen"></p></p>
+    <p class="pub">Publisher:<p id="Pub"></p></p>
+    <p class="deve">Developer:<p id="Deve"></p></p>
+    <p class="date">Release Date:<p id="Date"></p></p>
+    <p class="plat">Platform:<p id="Plat"></p></p>
+    <script>
+      var Key;
+      var desc;
+      var genr;
+      var pub;
+      var deve;
+      var date;
+      var plat;
+      fetch("http://localhost:3000/api/games")
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(game => {
+      const gameDictionary = {
+        [game.id]: game.title
+      };
+      const description = {
+        [game.short_description]: game.title
+      }
+      const genre = {
+        [game.genre]: game.title
+      }
+      const publisher = {
+        [game.publisher]: game.title
+      }
+      const developer = {
+        [game.developer]: game.title
+      }
+      const release_date = {
+        [game.release_date]: game.title
+      }
+      const platform = {
+        [game.platform]: game.title
+      }
+      Key = Object.keys(gameDictionary).find(key => gameDictionary[key] === `${myVariable}`);
+      desc = Object.keys(description).find(key => description[key] === `${myVariable}`);
+      genr = Object.keys(genre).find(key => genre[key] === `${myVariable}`);
+      pub = Object.keys(publisher).find(key => publisher[key] === `${myVariable}`);
+      deve = Object.keys(developer).find(key => developer[key] === `${myVariable}`);
+      date = Object.keys(release_date).find(key => release_date[key] === `${myVariable}`);
+      plat = Object.keys(platform).find(key => platform[key] === `${myVariable}`);
+      if (Key) {
+        document.getElementById('gameThumbnail').src = `https://www.freetogame.com/g/${Key}/thumbnail.jpg`;
+      }
+      if (desc) {
+        document.getElementById('shortdesc').textContent = desc;
+      }
+      if (genr) {
+        document.getElementById('Gen').textContent = genr;
+      }
+      if (pub) {
+        document.getElementById('Pub').textContent = pub;
+      }
+      if (deve) {
+        document.getElementById('Deve').textContent = deve;
+      }
+      if (date) {
+        document.getElementById('Date').textContent = date;
+      }
+      if (plat) {
+        document.getElementById('Plat').textContent = plat;
+      }
+    })
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+    </script>
+    
+    <script>
+      function getCookie(name) {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i].trim();
+          if (cookie.startsWith(name + "=")) {
+            return cookie.substring(name.length + 1);
+          }
+        }
+        return "";
+      }
+  
+      var storedData = getCookie("data");
+      var myVariable = storedData; 
+      
+      if (storedData !== "") {
+        document.getElementById('storedValue').textContent = storedData;
+      } else {
+        document.getElementById('storedValue').textContent = "No value stored.";
+      }
+  </script>
+  
+</body>
+</html>

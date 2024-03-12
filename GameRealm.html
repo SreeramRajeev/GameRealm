@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="Website Icon" type="png" href="arc.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="style0.css" rel="stylesheet" type="text/css" />
+    <title>Game Realm</title>;
+    <script src="no_delay.js"></script>
+</head>
+<body>
+    <script>no_delay('sky.jpg');</script>
+    <div class="flex-container">
+        <!-- "m1" section -->
+        <div class="m1">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="#"><img src="logo.png" style="width: 150px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#overview">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#games">Games</a>
+                        </li>
+                      <div id="transition-overlay">
+          <img src="transition.gif" alt="Transition" />
+        </div>
+                        <li class="nav-item">
+                            <a class="transition-link nav-link" href="abt2.html">About Us</a>
+                        </li>
+                        <li class="transition-link nav-item">
+                            <a class="nav-link" href="feedback.html">Feedback</a>
+                        </li>
+                        <li class="transition-link nav-item">
+                            <a class="nav-link" href="gallery.html">Realm Gallery</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search" id="inputValue">
+                        <button class="btn btn-outline-success" type="submit" onclick="storeValue()">Search</button>
+                    </form>
+                </div>
+            </nav>
+          </div>
+          <div class="container" id="overview">
+            <div class="nav-wrapper">
+                <nav>
+                    <h1 class="hover-this"><span>Welcome to<br>the World of<br>Gaming</span></h1>
+                    <div class="cursor"></div>
+                </nav>
+            </div>
+            <div class="content-wrapper">
+                <img id="img" src="project.png">
+            </div>
+        </div>
+        <!-- "games" section -->
+        <div class="games" id="games">
+            <div class="container-fluid ga">
+                <p style="display:none">Hello</p>
+                <h2 class="ga" style="margin-top: 60px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><u>Try Out Games</u></h2>
+                <marquee class="marquee" scrollamount="40" onmouseover="this.stop();" onmouseout="this.start();">
+                    <div style="display: flex;gap: 25px;" class="marquee-content">
+                        <a href="another.html" target="flap">
+                            <img src="flappy.jpg" alt="Flappy Bird" style="width: 55vh;border-radius: 15px;">
+                        </a>
+                        <a href="another2.html" target="flap">
+                            <img src="sample_178.png" alt="Space Shooter" style="width: 55vh;border-radius: 15px;">
+                        </a>
+                        <a href="https://www.google.com/logos/2010/pacman10-i.html" target="flap">
+                            <img src="Pac-Man.jpg" alt="Pac-Man" style="width: 55vh;border-radius: 15px;">
+                        </a>
+                        <a href="another3.html" target="flap">
+                            <img src="Mario.jpeg" alt="Mario" style="width: 65vh;border-radius: 15px;">
+                        </a>
+                    </div>
+                </marquee>
+                <marquee style="margin-top: 30px;" class="marquee-content1" direction="right" scrollamount="40" onmouseover="this.stop();" onmouseout="this.start();">
+                    <div style="display: flex;gap: 25px;" class="marquee-content1">
+                        <a href="another1.html" target="flap">
+                            <img src="Algae.png" alt="Mario" style="width: 65vh;border-radius: 15px;">
+                        </a>
+                        <a href="https://ed563977-4216-4320-9f0c-c3526182d473-00-2ppizgdo7mctm.sisko.replit.dev/" target="flap">
+                            <img src="SpaceHuggers.png" alt="Mario" style="width: 65vh;border-radius: 15px;">
+                        </a>
+                        <a href="another2.html" target="flap">
+                            <img src="sample_178.png" alt="Mario" style="width: 65vh;border-radius: 15px;">
+                        </a>
+                        <a href="https://0ae6f47b-2668-44f2-aa6e-05cc27d86aa6-00-ljdu657jf56q.sisko.replit.dev/" target="flap">
+                            <img src="dino.jpg" alt="Mario" style="width: 65vh;border-radius: 15px;">
+                        </a>
+                    </div>
+                </marquee>
+                <h3 style="margin-top: 20px;"><a href="List.html">View List</a></h3>
+              
+            </div>
+        </div>
+      <div class="footer-container">
+            <div class="video-container">
+              <video id="video-bg" autoplay loop muted>
+                <source src="https://www.gstatic.com/play/games/videos/join-waitlist-desktop-bd6e8683.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="overlay">
+                <h1>Get in on the action</h1>
+                <h2>Explore the realms of gaming excitement at GameRealm, where adrenaline-pumping challenges await to elevate your gaming experience.</h2>
+            </div>
+          </div>
+    </div>
+    <script src="transition.js"></script>
+    <script src="cursor.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script>
+        function storeValue() {
+            var inputValue = document.getElementById('inputValue').value;
+            document.cookie = "data=" + inputValue;
+            alert("Value stored in cookie!");
+            window.open("search.html");
+        }
+    </script>
+</body>
+</html>
+

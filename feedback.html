@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> feedback</title>
+   <link rel="Website Icon" type="png" href="arc.png">
+  <link rel="stylesheet" href="feedback.css">
+</head>
+
+<body>
+  <div class="container">
+	  <div class="heading">
+	   <h1>Give your feedback</h1>
+    </div>
+    <form>
+
+    <input type="text" id="name" placeholder="your name">
+    <input type="text" id="email" placeholder="your email Id">
+    <input type="text" id="phone" placeholder="your phone number">
+    <p>Select the game you played:</p>
+    <div class="photos">
+      <label>
+        <input type="radio" name="photo" value="photo1.jpg">
+        <img src="sm.jpg" alt="Photo 1">
+      </label>
+      <label>
+        <input type="radio" name="photo" value="photo2.jpg">
+        <img src="sp.jpg" alt="Photo 2">
+      </label>
+      <label>
+        <input type="radio" name="photo" value="photo3.jpg">
+        <img src="fp.jpg" alt="Photo 3">
+      </label>
+      <label>
+        <input type="radio" name="photo" value="photo4.jpg">
+        <img src="sm.jpg" alt="Photo 4">
+      </label>
+    </div>
+    <textarea id="feedback" rows="6" placeholder="enter your feedback"></textarea>
+<p>How do you rate us?</p>
+<div class="star-rating">
+  <input type="radio" id="star5" name="rating" value="5" />
+  <label for="star5"></label>
+  <input type="radio" id="star4" name="rating" value="4" />
+  <label for="star4"></label>
+  <input type="radio" id="star3" name="rating" value="3" />
+  <label for="star3"></label>
+  <input type="radio" id="star2" name="rating" value="2" />
+  <label for="star2"></label>
+  <input type="radio" id="star1" name="rating" value="1" />
+  <label for="star1"></label>
+</div>
+
+    <button type="submit" id="submit-btn">send </button>
+
+
+    </form>
+  </div>
+  <script>
+     document.getElementById('submit-btn').addEventListener('click', function () {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var feedback = document.getElementById("feedback").value;
+
+      if (name === "" || email === "" || phone === "" || feedback === "") {
+        alert("All fields are required.");
+        return;
+      }
+
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      var phonePattern = /^\d{10}$/;
+      if (!phone.match(phonePattern)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+      }
+
+         }); 
+  </script>
+  
+ 
+
+
+</body>
+
+</html>

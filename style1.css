@@ -1,0 +1,53 @@
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(to bottom right, #333333, #111111);
+    color: #ffffff;
+    padding: 20px;
+    background-color: rgb(18,17,17);
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #gameThumbnail {
+    width: 500px; 
+    height: auto; 
+    margin: 20px auto; 
+    border: 4px solid #ffffff;
+    transition: transform 0.3s ease;
+  }
+  #gameThumbnail:hover{
+    transform: scale(1.1);
+  }
+  .des, .genr, .pub, .deve, .date, .plat {
+    font-weight: bold;
+    border-left: 3px solid #00ffff;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  .des::after, .genr::after, .pub::after, .deve::after, .date::after, .plat::after {
+    content: ":";
+    margin-left: 5px;
+  }
+  #shortdesc, #Gen, #Pub, #Deve, #Date, #Plat {
+    margin-bottom: 25px;
+    text-shadow: 0 0 5px #00ffff;
+    margin-left: 50px;
+  }
+  #storedValue {
+    color: #ff0000;
+    font-style: italic;
+    font-size: 14px;
+  }
+  #storedValue:not(:empty) {
+    display: none;
+  }
+  

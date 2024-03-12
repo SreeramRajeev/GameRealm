@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Realm</title>
+    <link rel="Website Icon" type="png" href="arc.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="no_delay.js"></script>
+</head>
+<body class="game-background">
+    <script>no_delay('./625497.webp');</script>
+    <div class="loading-screen">
+        <video id="loading-video" src="loading.mp4" autoplay muted loop preload="auto"></video>
+    </div>
+    <div class="container">
+        <div class="form-container login-screen" id="signin">
+            <h1>Sign in to your account</h1>
+            <input type="email" id="email1" placeholder="Email address" />
+            <br /><br />
+            <input type="password" id="password1" placeholder="Password" />
+            <br /><br />
+            <a href="#" onclick="showForgotPassword()" class="forget-btn">Forgot password?</a>
+            <br /><br />
+            <button id="login-btn">Log in</button>
+            <hr>
+            <h4>Don't have an account?</h4>
+            <a href="#" onclick="showSignUp()" class="sign-up-btn">Sign up</a>
+        </div>
+      <!-- <div class="form-container login-screen" id="signin">
+            <h1>Sign in to your account</h1>
+            <input type="text" id="username" placeholder="Username" /> 
+            <br /><br />
+            <input type="password" id="password" placeholder="Password" />
+            <br /><br />
+            <a href="#" onclick="showForgotPassword()" class="forget-btn">Forgot password?</a>
+            <br /><br />
+            <button id="login-btn">Log in</button>
+            <hr>
+            <h4>Don't have an account?</h4>
+            <a href="#" onclick="showSignUp()" class="sign-up-btn">Sign up</a>
+        </div> -->
+
+        <div class="form-container forgot-pass-screen" id="forget" style="display: none;">
+            <h1>Forgot your password?</h1>
+            <h4>Type your email address below and we'll send you a reset link</h4>
+            <input type="email" id="email2" placeholder="Email address" />
+            <br /><br />
+            <button id="reset-link-btn">Send password reset link</button>
+            <br /><br />
+            <a href="#" onclick="showSignIn()" class="sign-up-btn">Sign in</a>
+        </div>
+
+        <div class="form-container signup-screen" id="signup" style="display: none;">
+            <h1>Create your account</h1>
+            <input type="text" id="first" placeholder="First name" />
+            <br /><br />
+            <input type="text" id="last" placeholder="Last name" />
+            <br /><br />
+            <input type="text" id="email3" placeholder="Email address" />
+            <br /><br />
+            <input type="password" id="password31" placeholder="Password" />
+            <br /><br />
+            <input type="password" id="password32" placeholder="Confirm password" />
+            <br /><br />
+            <button id="signup-btn">Sign up</button>
+            <hr>
+            <h4>Already have an account?</h4>
+            <a href="#" onclick="showSignIn()" class="sign-up-btn">Sign in</a>
+        </div>
+    </div>
+
+    <script>
+         function isValidEmail(email) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+
+        function isValidPassword(password) {
+            const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+            return passwordPattern.test(password);
+        }
+
+        function isValidFirstName(firstName) {
+            return firstName.trim() !== '';
+        }
+
+        function isValidLastName(lastName) {
+            return lastName.trim() !== '';
+        }
+
+        function showSignIn() {
+            document.getElementById('signin').style.display = 'block';
+            document.getElementById('forget').style.display = 'none';
+            document.getElementById('signup').style.display = 'none';
+        }
+
+        function showForgotPassword() {
+            document.getElementById('signin').style.display = 'none';
+            document.getElementById('forget').style.display = 'block';
+            document.getElementById('signup').style.display = 'none';
+        }
+
+        function showSignUp() {
+            document.getElementById('signin').style.display = 'none';
+            document.getElementById('forget').style.display = 'none';
+            document.getElementById('signup').style.display = 'block';
+        }
+
+        function redirectToPage(pageUrl) {
+            document.querySelector('.loading-screen').style.display = 'flex';
+            document.querySelector('.container').style.display = 'none';
+            setTimeout(function () {
+                window.location.href = pageUrl;
+            }, 4095);
+        }
+        document.getElementById('login-btn').addEventListener('click', function () {
+            const email = document.getElementById('email1').value;
+            const password = document.getElementById('password1').value;
+        if (email === "" || password === "") {
+        alert("All fields are required.");
+        return;
+      }
+          if (!isValidEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        if (!isValidPassword(password)) {
+            alert('Please enter a valid password. Your password must contain at least one uppercase letter, one digit, and one special character, and be at least 8 characters long.');
+            return;
+        }
+            if (email === 'gamerealm143@gmail.com' && password === 'Abc@_143') {
+                redirectToPage('admin.html');
+            } else {
+		        redirectToPage('termsof_service.html');
+            }
+        });
+
+        document.getElementById('signup-btn').addEventListener('click', function () {
+	        const firstName = document.getElementById('first').value;
+            const lastName = document.getElementById('last').value;
+            const email = document.getElementById('email3').value;
+            const password = document.getElementById('password31').value;
+            const confirmPassword = document.getElementById('password32').value;
+          if (firstName === "" || lastName === "" || email === "" || password === "" || confirmPassword === "") {
+        alert("All fields are required.");
+        return;
+      }
+
+            if (!isValidFirstName(firstName)) {
+                alert('Please enter a valid first name.');
+                return;
+            }
+
+            if (!isValidLastName(lastName)) {
+                alert('Please enter a valid last name.');
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            if (!isValidPassword(password)) {
+                alert('Please enter a valid password. Your password must contain at least one uppercase letter, one digit, and one special character, and be at least 8 characters long.');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+            alert('Signup successful!');    
+            window.location.href = "index.html";
+        });
+
+        document.getElementById('reset-link-btn').addEventListener('click', function () {
+            const email = document.getElementById('email2').value;
+
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address.');
+                return ;
+            }
+            
+            alert('A password reset link has been sent to ' + email); 
+	    window.location.href = "index.html";
+            
+        });
+
+        window.onload = function () {
+            document.querySelector('.loading-screen').style.display = 'none';
+            document.querySelector('.container').style.display = 'flex';
+        };
+    </script>
+</body>
+</html>
